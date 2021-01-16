@@ -6,8 +6,8 @@ import { hot } from 'react-hot-loader/root';
 function App() {
   return (
     <div className="App">
-      <CounterPage></CounterPage>
-      {/* <BuyCartPage></BuyCartPage> */}
+      {/* <CounterPage></CounterPage> */}
+      <BuyCartPage></BuyCartPage>
     </div>
   );
 }

@@ -8,9 +8,9 @@ import { inject, observer } from 'mobx-react'
 @observer
 class CounterPage extends Component {
   componentDidMount(){
-    const { getData, getDataByFlow } = this.props.counter
+    const { getDataByFlow } = this.props.counter
     console.log(this.props)
-    // getData && getData()
+    // this.props.counter.getData && this.props.counter.getData()
     getDataByFlow()
   }
   render() {
