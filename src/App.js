@@ -1,6 +1,7 @@
 import './App.css';
 import CounterPage from './view/CounterPage'
 import BuyCartPage from './view/BuyCartPage'
+import { hot } from 'react-hot-loader/root';
 
 function App() {
   return (
@@ -11,4 +12,4 @@ function App() {
   );
 }
 
-export default App;
+export default hot(App);

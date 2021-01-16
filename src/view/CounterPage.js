@@ -7,6 +7,12 @@ import { inject, observer } from 'mobx-react'
  // @observer 将组件装饰为观察者
 @observer
 class CounterPage extends Component {
+  componentDidMount(){
+    const { getData, getDataByFlow } = this.props.counter
+    console.log(this.props)
+    // getData && getData()
+    getDataByFlow()
+  }
   render() {
     const { counter } = this.props
     console.log(counter)
@@ -16,6 +22,12 @@ class CounterPage extends Component {
         count: {counter.count}
         completedPrice: {counter.completedPrice}
         <button onClick={counter.decrement}>-</button>
+        <input type="text" value={counter.name} onChange={(e) => counter.changeName(e.target.value)}></input>
+        <div>
+          {counter.users.map(item => {
+            return  <div>{item.login}</div>
+          })}
+        </div>
       </div>
     )
   }
